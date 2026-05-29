@@ -1,0 +1,3 @@
+Código: 0101 | Nombre: Programacion 1 | Créditos: 4 | Cupo: 30
+Código: 0202 | Nombre: Proceso Administrativo | Créditos: 4 | Cupo: 30
+Código: 0303 | Nombre: Derecho Infromatico | Créditos: 4 | Cupo: 30
