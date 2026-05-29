@@ -24,7 +24,7 @@ public class CourseFile {
     private void guardarCSV(ArrayList<Course> courses) {
 
         try (FileWriter writer = new FileWriter(CSV_FILE)) {
-
+        	writer.write("Codigo,Nombre,Creditos,Cupo\n");
             for (Course course : courses) {
 
                 writer.write(
@@ -69,7 +69,7 @@ public class CourseFile {
 
         try (BufferedReader reader =
                      new BufferedReader(new FileReader(CSV_FILE))) {
-
+        	reader.readLine();
             String line;
 
             while ((line = reader.readLine()) != null) {

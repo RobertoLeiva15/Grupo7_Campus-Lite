@@ -25,7 +25,7 @@ public class EvaluationFile {
     private void guardarCSV(ArrayList<Evaluation> evaluations) {
 
         try (FileWriter writer = new FileWriter(CSV_FILE)) {
-
+        	writer.write("Nombre,Ponderacion,Nota\n");
             for (Evaluation evaluation : evaluations) {
 
                 writer.write(
@@ -48,6 +48,7 @@ public class EvaluationFile {
 
         try (FileWriter writer = new FileWriter(TXT_FILE)) {
 
+
             for (Evaluation evaluation : evaluations) {
 
                 writer.write(evaluation.toString() + "\n");
@@ -68,6 +69,7 @@ public class EvaluationFile {
 
         try (BufferedReader reader =
                      new BufferedReader(new FileReader(CSV_FILE))) {
+        	reader.readLine();
 
             String line;
 

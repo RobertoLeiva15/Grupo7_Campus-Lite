@@ -25,7 +25,7 @@ package persistence;
 	    private void guardarCSV(ArrayList<Student> students) {
 
 	        try (FileWriter writer = new FileWriter(CSV_FILE)) {
-
+	        	writer.write("Carnet,Nombre,Apellido,Correo\n");
 	            for (Student student : students) {
 
 	                writer.write(
@@ -71,6 +71,7 @@ package persistence;
 
 	        try (BufferedReader reader =
 	                     new BufferedReader(new FileReader(CSV_FILE))) {
+	        	reader.readLine();
 
 	            String line;
 
